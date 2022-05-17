@@ -5,9 +5,12 @@
     <title>Message</title>
 </head>
 <body>
+<h3>Input 10 messages</h3>
 <form action="<c:url value="/mdb"/>">
-    Your message: <input name="msg"><br/>
-    <input type="submit" value="send">
+    <c:forEach begin="1" end="10" varStatus="status">
+        Message ${status.count}: <input type="text" name="msg"/><br/>
+    </c:forEach>
+    <button>Submit</button>
 </form>
 </body>
 </html>
